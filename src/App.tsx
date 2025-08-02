@@ -1,10 +1,16 @@
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Dashboard } from './Pages/Dashboard'
+import { Signup } from './Pages/Signup'
+import { Signin } from './Pages/Signin'
 
 function App() {
-
-  return <div className='px-5 py-6 bg-red-300'>
-    <span className='text-red-50'>Hellow World !</span>
-  </div>
+  return <BrowserRouter>
+      <Routes>
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/signin' element={<Signin />} />
+      </Routes>
+  </BrowserRouter>
 }
 
 export default App
